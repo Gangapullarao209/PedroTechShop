@@ -1,0 +1,79 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.shopTitle {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Adjusted grid-template-columns */
+  gap: 40px; /* Increased the gap between rows */
+  place-items: center;
+}
+
+.product {
+  border-radius: 15px;
+  width: 230px; /* Reduced the width of the cards */
+  height: 300px; /* Reduced the height of the cards */
+  margin: 20px; /* Reduced the margin between cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product img {
+  max-width: 100%; /* Ensure the image doesn't overflow the container */
+  max-height: 100%; /* Ensure the image doesn't overflow the container */
+}
+
+.product .description {
+  text-align: center;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttn {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 80px; /* Reduced the minimum width of the button */
+  padding: 5px 10px; /* Adjusted padding for the button */
+  border-radius: 15px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color:white;
+  cursor: pointer;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .product {
+      max-width: 300px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .product {
+      max-width: 250px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .product {
+      max-width: 100%; /* Full width for smaller screens */
+  }
+}
