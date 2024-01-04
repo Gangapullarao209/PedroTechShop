@@ -16,12 +16,11 @@ export default function Cart() {
         <h1> Your Cart Items </h1>
       </div>
       <div className="cartItems">
-        {PRODUCTS.map((product)=>{
-
-           if(cartItems[product.id] !==0){
-            return <CartItem data={product}/>
-           }
-
+      {PRODUCTS.map((product) => {
+          if (cartItems[product.id] !== 0) {
+           return <CartItem data={product} />;
+          }
+          return null;
         })}
       </div>
       
@@ -30,10 +29,10 @@ export default function Cart() {
       
       <p>Subtotal:${totalAmount}</p>
       <button   onClick={()=>navigate('/')}>Continue shopping</button>
-      <button  >Checkout</button>
+      <button>Checkout</button>
       </div>):
       
-      <h1>Your Cart is Empty</h1>
+     ( <h1>Your Shopping Cart is Empty</h1>)
       
       }
 
